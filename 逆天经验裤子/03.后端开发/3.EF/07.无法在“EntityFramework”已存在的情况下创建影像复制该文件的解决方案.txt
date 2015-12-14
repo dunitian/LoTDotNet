@@ -1,0 +1,77 @@
+问题产生的原因：你项目正在生成中你就打开浏览器预览了，导致这个问题
+解决方案：右击重新生成项目，等生成后再打开
+
+
+“/”应用程序中的服务器错误。
+
+无法在“EntityFramework”已存在的情况下创建/影像复制该文件。
+
+说明: 执行当前 Web 请求期间，出现未经处理的异常。请检查堆栈跟踪信息，以了解有关该错误以及代码中导致错误的出处的详细信息。 
+
+异常详细信息: System.IO.FileLoadException: 无法在“EntityFramework”已存在的情况下创建/影像复制该文件。
+
+源错误: 
+
+执行当前 Web 请求期间生成了未经处理的异常。可以使用下面的异常堆栈跟踪信息确定有关异常原因和发生位置的信息。
+
+程序集加载跟踪: 下列信息有助于确定程序集“EntityFramework”未能加载的原因。
+
+
+=== 预绑定状态信息 ===
+日志: DisplayName = EntityFramework
+ (Partial)
+警告: 为程序集提供了部分绑定信息:
+警告: 程序集名称: EntityFramework | 域 ID: 2
+警告: 当仅提供程序集显示名称的一部分时，将发生部分绑定。
+警告: 这可能导致联编程序加载错误的程序集。
+警告: 建议为程序集提供完全指定的文字标识，
+警告: 并由简单名称、版本、区域性和公钥标记组成。
+警告: 有关此问题的详细信息和常见解决方案，请参见白皮书 http://go.microsoft.com/fwlink/?LinkId=109270。
+日志: Appbase = file:///C:/Users/DNT/Desktop/LoTCode/LoTBlog/LoTBlog.Back/
+日志: 初始 PrivatePath = C:\Users\DNT\Desktop\LoTCode\LoTBlog\LoTBlog.Back\bin
+调用程序集: (Unknown)。
+===
+日志: 此绑定从 default 加载上下文开始。
+日志: 正在使用应用程序配置文件: C:\Users\DNT\Desktop\LoTCode\LoTBlog\LoTBlog.Back\web.config
+日志: 使用主机配置文件: C:\Users\DNT\Documents\IISExpress\config\aspnet.config
+日志: 使用 C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config 的计算机配置文件。
+日志: 此时没有为引用应用策略(私有、自定义、分部或基于位置的程序集绑定)。
+日志: 尝试下载新的 URL file:///C:/Windows/Microsoft.NET/Framework/v4.0.30319/Temporary ASP.NET Files/root/c3d58240/a41cf0bf/EntityFramework.DLL。
+日志: 尝试下载新的 URL file:///C:/Windows/Microsoft.NET/Framework/v4.0.30319/Temporary ASP.NET Files/root/c3d58240/a41cf0bf/EntityFramework/EntityFramework.DLL。
+日志: 尝试下载新的 URL file:///C:/Users/DNT/Desktop/LoTCode/LoTBlog/LoTBlog.Back/bin/EntityFramework.DLL。
+日志: 正在使用应用程序配置文件: C:\Users\DNT\Desktop\LoTCode\LoTBlog\LoTBlog.Back\web.config
+日志: 使用主机配置文件: C:\Users\DNT\Documents\IISExpress\config\aspnet.config
+日志: 使用 C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config 的计算机配置文件。
+日志: 策略后引用: EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+错误: 未能完成程序集的安装(hr = 0x800700b7)。探测终止。
+
+堆栈跟踪: 
+
+
+[FileLoadException: 无法在“EntityFramework”已存在的情况下创建/影像复制该文件。]
+
+[FileLoadException: 无法在“EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089”已存在的情况下创建/影像复制该文件。]
+   System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks) +0
+   System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks) +34
+   System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks) +152
+   System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection) +77
+   System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection) +16
+   System.Reflection.Assembly.Load(String assemblyString) +28
+   System.Web.Configuration.CompilationSection.LoadAssemblyHelper(String assemblyName, Boolean starDirective) +38
+
+[ConfigurationErrorsException: 无法在“EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089”已存在的情况下创建/影像复制该文件。]
+   System.Web.Configuration.CompilationSection.LoadAssemblyHelper(String assemblyName, Boolean starDirective) +736
+   System.Web.Configuration.CompilationSection.LoadAllAssembliesFromAppDomainBinDirectory() +217
+   System.Web.Configuration.CompilationSection.LoadAssembly(AssemblyInfo ai) +130
+   System.Web.Compilation.BuildManager.GetReferencedAssemblies(CompilationSection compConfig) +170
+   System.Web.Compilation.BuildManager.GetPreStartInitMethodsFromReferencedAssemblies() +91
+   System.Web.Compilation.BuildManager.CallPreStartInitMethods(String preStartInitListPath, Boolean& isRefAssemblyLoaded) +284
+   System.Web.Compilation.BuildManager.ExecutePreAppStart() +153
+   System.Web.Hosting.HostingEnvironment.Initialize(ApplicationManager appManager, IApplicationHost appHost, IConfigMapPathFactory configMapPathFactory, HostingEnvironmentParameters hostingParameters, PolicyLevel policyLevel, Exception appDomainCreationException) +516
+
+[HttpException (0x80004005): 无法在“EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089”已存在的情况下创建/影像复制该文件。]
+   System.Web.HttpRuntime.FirstRequestInit(HttpContext context) +9885044
+   System.Web.HttpRuntime.EnsureFirstRequestInit(HttpContext context) +101
+   System.Web.HttpRuntime.ProcessRequestNotificationPrivate(IIS7WorkerRequest wr, HttpContext context) +254
+
+版本信息: Microsoft .NET Framework 版本:4.0.30319; ASP.NET 版本:4.0.30319.34009 

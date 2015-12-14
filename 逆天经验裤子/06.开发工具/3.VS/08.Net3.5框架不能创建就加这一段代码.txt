@@ -1,0 +1,3 @@
+3.5框架不能创建就加这一段代码
+
+<ResGenToolArchitecture>Managed32Bit</ResGenToolArchitecture>

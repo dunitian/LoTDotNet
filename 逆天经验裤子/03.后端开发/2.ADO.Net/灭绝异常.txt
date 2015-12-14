@@ -1,0 +1,15 @@
+1.TypeInitializationException
+	SqlHelper”的类型初始值设定项引发异常。
+		一般都是配置文件的问题
+
+2.ArgumentException
+	其他信息: 不支持关键字: “initail catalog”
+		一般都是配置文件或者连接语句关键词写错了
+
+3.InvalidOperationException
+	要求打开可用Connetion
+		一般都是conn.Open()忘记写了
+		还有时候是cmd参数少写了conn [cmd参数-sql语句，conn对象]
+
+4.SqlException
+	很多种情况，一般都是sql语句执行出错（有忘记加参数，有sql是错的。。。）

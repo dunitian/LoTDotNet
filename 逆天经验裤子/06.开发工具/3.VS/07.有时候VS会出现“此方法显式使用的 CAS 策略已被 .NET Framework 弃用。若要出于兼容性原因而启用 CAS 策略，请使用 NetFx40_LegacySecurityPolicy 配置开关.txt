@@ -1,0 +1,8 @@
+有时候VS会出现“此方法显式使用的 CAS 策略已被 .NET Framework 弃用。若要出于兼容性原因而启用 CAS 策略，请使用 NetFx40_LegacySecurityPolicy 配置开关。这样的错误，在网上找过很多解决办法其中修改配置文件最管用了，下面说一下怎么改配置文件 首先找到VS2010的安装目录，默认是 C:\Program Files\Microsoft Visual Studio 10.0
+
+然后在 C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE 中找到 devenv.exe.config 配置文件，打开，在<runtime>的节点下添加 
+
+<NetFx40_LegacySecurityPolicy enabled="true"/>  
+代码，保存 关闭，重启VS2010 此时就不会出现这个错误。  
+
+提示：修改前请备份
