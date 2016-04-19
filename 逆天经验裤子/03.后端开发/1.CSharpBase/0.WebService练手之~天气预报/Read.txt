@@ -1,0 +1,5 @@
+http://webservice.webxml.com.cn/WebServices/WeatherWS.asmx
+
+http://www.webxml.com.cn/zh_cn/weather_icon.aspx
+
+联网才可以查天气

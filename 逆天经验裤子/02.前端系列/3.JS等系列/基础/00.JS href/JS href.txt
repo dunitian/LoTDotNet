@@ -1,0 +1,11 @@
+1.parent.location.href
+
+这里的作用是取到包含子页面的时候，在子页面里面取到父页面的URL，并不是取上一个页面的URL
+
+2.window.location.href
+
+设置或获取当前页码的URL
+
+3.document.referrer
+
+获取上个页面的url（特殊情况获取不到，后台获取最稳妥）
